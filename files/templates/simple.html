@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+   <form action = "/result" method = "POST">
+<body>
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+</body>
+    <input type='submit' value='Submit' />
+</html>
