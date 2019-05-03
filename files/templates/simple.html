@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+<p id="demo"></p>
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
    <form action = "/result" method = "POST">
 <body>
+
 {% for table in tables %}
             {{ table|safe }}
 {% endfor %}
+<br>
+<input type='submit' value='Submit' />
 </body>
-    <input type='submit' value='Submit' />
+   </form>
 </html>
